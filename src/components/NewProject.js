@@ -1,18 +1,30 @@
 import React from 'react'
 
-const NewProject = ({ handleProjectName, handleProjectOwner, handleAddProject }) => {
+const NewProject = ({
+  handleProjectName,
+  handleProjectOwner,
+  handleAddProject,
+  handleKeyPressed
+}) => {
   return (
-    <div className="project-form">
-      <div className="form-row new-project-name">
-        <span>New project name: </span>
-        <input type="text" onChange={handleProjectName} />
+    <footer>
+      <div className="project-form">
+        <input
+          className="new-project-name"
+          type="text"
+          onChange={handleProjectName}
+          onKeyPress={handleKeyPressed}
+        />
+        <input
+          className="new-project-owner"
+          type="text"
+          onChange={handleProjectOwner}
+          onKeyPress={handleKeyPressed}
+        />
+
+        <button type='button' onClick={handleAddProject}>Add project</button>
       </div>
-      <div className="form-row new-project-owner">
-        <span>New project owner: </span>
-        <input type="text" onChange={handleProjectOwner} />
-      </div>
-      <button type='button' onClick={handleAddProject}>Add project</button>
-    </div>
+    </footer>
   )
 }
 

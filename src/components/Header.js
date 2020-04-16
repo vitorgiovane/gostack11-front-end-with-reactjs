@@ -1,10 +1,13 @@
 import React from 'react'
 
-const Header = ({ title, children }) => {
+import logo from '../assets/logo.png'
+
+const Header = ({ prefix, title }) => {
   return (
     <header>
-      <h1>{title}</h1>
-      {children}
+      <img src={logo} alt="My Projects Logo" />
+      <span>{prefix}</span>
+      <strong>{title}</strong>
     </header>
   )
 }

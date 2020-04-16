@@ -28,22 +28,31 @@ const App = () => {
     })
   }
 
-  const handleProjectName = (e) => {
-    setNewProjectName(e.target.value)
+  const handleProjectName = event => {
+    setNewProjectName(event.target.value)
   }
 
-  const handleProjectOwner = (e) => {
-    setNewProjectOwner(e.target.value)
+  const handleProjectOwner = event => {
+    setNewProjectOwner(event.target.value)
+  }
+
+  const handleKeyPressed = event => {
+    if (event.key === "Enter") {
+      handleAddProject()
+    }
   }
 
   return (
     <>
-      <Header title="Projects" />
-      <Projects projects={projects} />
+      <Header prefix="My" title="Projects" />
+      <div className="container">
+        <Projects projects={projects} />
+      </div>
       <NewProject
         handleProjectName={handleProjectName}
         handleProjectOwner={handleProjectOwner}
         handleAddProject={handleAddProject}
+        handleKeyPressed={handleKeyPressed}
       />
     </>
   )

@@ -5,7 +5,7 @@ import Project from './Project'
 const Projects = ({ projects }) => {
   return (
     <ul>
-      {projects.map(project => <Project project={project} />)}
+      {projects.map(project => <Project key={project.id} project={project} />)}
     </ul>
   )
 }
