@@ -10,3 +10,20 @@ body {
   font: 14px sans-serif;
   color: #333333;
 }
+
+button {
+  display: block;
+  margin-top: 20px;
+  padding: 10px;
+}
+
+.project-form {
+  width: 400px;
+  margin-top: 1em;
+  display: flex;
+  flex-direction: column;
+}
+
+.form-row {
+  margin-bottom: 0.5em;
+}
