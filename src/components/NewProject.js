@@ -14,12 +14,14 @@ const NewProject = ({
           type="text"
           onChange={handleProjectName}
           onKeyPress={handleKeyPressed}
+          placeholder="Project name"
         />
         <input
           className="new-project-owner"
           type="text"
           onChange={handleProjectOwner}
           onKeyPress={handleKeyPressed}
+          placeholder="Project owner"
         />
 
         <button type='button' onClick={handleAddProject}>Add project</button>
